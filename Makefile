@@ -1,3 +1,4 @@
+
 create-venv:
 	# Create a new python virtual environment
 	python3 -m venv .venv;
@@ -11,7 +12,7 @@ update-deps:
 prereqs:
 	# Install the locked app and dev dependencies
 	python -m pip install --upgrade pip wheel
-	python -m pip install --upgrade -r requirements.txt -r requirements-dev.txt -e .
+	python -m pip install --upgrade -r requirements.txt -r requirements-dev.txt --editable .
 	python -m pip check
 
 update: update-deps prereqs
