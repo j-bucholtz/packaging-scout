@@ -3,12 +3,22 @@ repos:
     hooks:
     -   id: black
         name: black
-        entry: black src
+        entry: black src/packaging_scout
         language: system
         types: [python]
     -   id: pylint
         name: pylint
-        entry: pylint src
+        entry: pylint src/packaging_scout
         language: system
         types: [python]
-    - id
+    -   id: mypy
+        name: mypy
+        entry: mypy src/packaging_scout
+        language: system
+        types: [python]
+    -   id: isort
+        name: isort
+        entry: isort src/packaging_scout
+        language: system
+        types: [python]
+

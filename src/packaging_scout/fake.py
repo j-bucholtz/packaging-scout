@@ -2,6 +2,21 @@
 Fake function definitions
 """
 
+from pydantic import BaseModel
+
+
+class Guesst(BaseModel):
+    """
+    A guest with an id and name.
+
+    Attributes:
+        - id (int): An unique id for a guest
+        - name (str): The guest's name
+    """
+
+    id: int
+    name: str
+
 
 class ProbablyAFakeName(Exception):
     """
