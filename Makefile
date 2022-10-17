@@ -12,8 +12,11 @@ update-deps:
 prereqs:
 	# Install the locked app and dev dependencies
 	python -m pip install --upgrade pip wheel
-	python -m pip install --upgrade -r requirements.txt -r requirements-dev.txt --editable .
-	python -m pip check
+	pip-sync requirements.txt  requirements-dev.txt
+
+editable:
+	python -m pip install --upgrade pip wheel
+	python -m pip install requirements.txt requirements-dev.txt --editable .
 
 update: update-deps prereqs
 
