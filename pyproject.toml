@@ -43,7 +43,7 @@ dev = [
 source = "vcs"
 
 [tool.hatch.build.hooks.vcs]
-version-file = "src/packaging_scout/__version.py"
+version-file = "src/packaging_scout/_version.py"
 
 [tool.black]
 line-length = 100
