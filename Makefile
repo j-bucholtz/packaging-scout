@@ -31,4 +31,7 @@ lint:
 	pylint src/packaging_scout
 	mypy src/packaging_scout
 
-.PHONY: create-venv update-deps prereqs update set-hooks run-hooks lint
+build:
+	python -m build
+
+.PHONY: create-venv update-deps prereqs update set-hooks run-hooks lint build
